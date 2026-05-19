@@ -161,9 +161,14 @@ export default function Dashboard() {
                       Quota: {p.quota} / 10
                     </span>
                   </div>
-                  <h4 className="text-lg font-bold text-slate-800 tracking-tight">
-                    {p.name}
-                  </h4>
+                  <div className="flex flex-col">
+                    <h4 className="text-lg font-bold text-slate-800 tracking-tight">
+                      {p.name}
+                    </h4>
+                    <span className="text-xs font-semibold text-slate-500 mt-0.5">
+                      Provider #{p.providerId}
+                    </span>
+                  </div>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between">

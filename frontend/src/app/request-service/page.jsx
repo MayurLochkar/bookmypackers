@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   User,
   Phone,
@@ -17,6 +18,13 @@ export default function RequestService() {
     name: '', phone: '', city: '', service: 'Service 1', description: ''
   });
   const [status, setStatus] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!localStorage.getItem('token')) {
+      router.push('/login');
+    }
+  }, [router]);
 
   // --- Backend Logic (Unchanged) ---
   const handleSubmit = async (e) => {

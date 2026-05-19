@@ -182,6 +182,26 @@ export default function Login() {
               <button type="submit" className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-500/20 transform hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]">
                 Sign In to Dashboard
               </button>
+
+              <div className="mt-6 border-t border-slate-100 pt-6">
+                <p className="text-xs text-center text-slate-400 font-bold uppercase tracking-wider mb-3">Demo Quick Login</p>
+                <div className="flex gap-3">
+                  <button 
+                    type="button" 
+                    onClick={() => { setEmail('admin@hackocean.com'); setPassword('admin123'); }}
+                    className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2 px-3 rounded-lg transition"
+                  >
+                    👨‍💻 Admin
+                  </button>
+                  <button 
+                    type="button" 
+                    onClick={() => { setEmail('provider@hackocean.com'); setPassword('provider123'); }}
+                    className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2 px-3 rounded-lg transition"
+                  >
+                    🏢 Provider
+                  </button>
+                </div>
+              </div>
             </form>
 
             <p className="mt-10 text-center text-sm text-slate-600">
